@@ -13,8 +13,8 @@
     --red: #DC2626;
     --dark-red: #991B1B;
     --blue: #1D4ED8;
-    --accent: #d12b11;
-    --accent-light: #e8604a;
+    --accent: #2b4c7e;
+    --accent-light: #5b8fbf;
     --dark: #111827;
     --gray: #6B7280;
     --light: #F9FAFB;
@@ -78,7 +78,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(209,43,17,0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(43,76,126,0.18) 0%, transparent 70%);
   }
   .hero-logo-img {
     max-width: 260px;
@@ -87,7 +87,7 @@
     margin-bottom: 16px;
     position: relative;
     z-index: 1;
-    filter: brightness(1.8);
+    filter: brightness(0) invert(1);
   }
   .hero-practice {
     font-size: clamp(14px, 2.5vw, 18px);
@@ -273,7 +273,7 @@
   }
   .provider-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(209,43,17,0.2);
+    box-shadow: 0 12px 40px rgba(43,76,126,0.3);
   }
   .provider-card img {
     width: 100%;
