@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Healthfirst Coverage Update | Belaray Dermatology</title>
+ <meta name="description" content="Important update for Healthfirst patients at Belaray Dermatology regarding a temporary out-of-network period.">
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --teal: #5B8FA8;
+    --teal-dark: #4a7a91;
+    --teal-light: #e8f2f7;
+    --teal-bg: #f4f9fb;
+    --dark: #1f2937;
+    --gray: #6B7280;
+    --light: #F9FAFB;
+    --white: #ffffff;
+    --green: #16A34A;
+    --green-light: #F0FDF4;
+  }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ===== LANGUAGE TOGGLE ===== */
+  .lang-toggle {
+    position: fixed;
+    top: 12px; right: 12px;
+    z-index: 1001;
+    display: flex; gap: 4px;
+    background: rgba(91,143,168,0.95);
+    border-radius: 8px; padding: 4px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+  .lang-btn {
+    padding: 8px 14px; border: none; border-radius: 6px;
+    font-weight: 700; font-size: 13px; cursor: pointer;
+    transition: all 0.2s; background: transparent; color: #fff; min-height: 44px;
+  }
+  .lang-btn.active { background: #fff; color: var(--teal); }
+  .es { display: none; }
+  body.spanish .en { display: none; }
+  body.spanish .es { display: block; }
+  body.spanish span.es, body.spanish a.es { display: inline; }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--teal-bg) 0%, var(--white) 100%);
+    padding: 28px 20px 36px;
+    text-align: center;
+    border-bottom: 3px solid var(--teal);
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--teal); color: #fff;
+    padding: 8px 20px; border-radius: 24px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  .hero-badge .dot {
+    width: 8px; height: 8px; background: #fff;
+    border-radius: 50%; animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1); }
+    50% { opacity:0.6; transform:scale(1.3); }
+  }
+  .hero h1 {
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 800; color: var(--dark);
+    line-height: 1.2; margin-bottom: 12px;
+    max-width: 640px; margin-left: auto; margin-right: auto;
+  }
+  .hero-sub {
+    font-size: clamp(15px, 2.5vw, 17px);
+    color: var(--gray); max-width: 540px;
+    margin: 0 auto; line-height: 1.7;
+  }
+
+  /* ===== INFO CARDS ===== */
+  .info-section { padding: 40px 20px 48px; max-width: 760px; margin: 0 auto; }
+  .info-card {
+    background: var(--white);
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .info-card.highlight { border-color: var(--teal); background: var(--teal-bg); }
+  .info-card.good { border-color: var(--green); background: var(--green-light); }
+  .info-card-icon { font-size: 28px; margin-bottom: 12px; }
+  .info-card h2 { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 10px; }
+  .info-card p { font-size: 15px; color: #374151; line-height: 1.7; margin-bottom: 10px; }
+  .info-card p:last-child { margin-bottom: 0; }
+  .info-card strong { color: var(--dark); }
+
+  /* ===== WHAT TO KNOW SECTION ===== */
+  .points-section { padding: 0 20px 48px; max-width: 760px; margin: 0 auto; }
+  .points-section h2 {
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 800; color: var(--dark);
+    text-align: center; margin-bottom: 28px;
+  }
+  .point-card {
+    display: flex; gap: 18px; align-items: flex-start;
+    background: var(--white);
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .point-icon {
+    font-size: 28px; min-width: 40px; text-align: center; padding-top: 2px;
+  }
+  .point-content h3 { font-size: 17px; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+  .point-content p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+  /* ===== TIMELINE ===== */
+  .expect-section { background: var(--light); padding: 48px 20px; }
+  .expect-inner { max-width: 760px; margin: 0 auto; }
+  .expect-section h2 {
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 800; color: var(--dark);
+    text-align: center; margin-bottom: 8px;
+  }
+  .expect-sub { text-align: center; color: var(--gray); font-size: 15px; margin-bottom: 32px; }
+  .timeline { display: flex; flex-direction: column; position: relative; }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 24px; top: 24px; bottom: 24px;
+    width: 3px; background: var(--teal); opacity: 0.3; border-radius: 2px;
+  }
+  .timeline-item { display: flex; gap: 20px; padding: 20px 0; position: relative; }
+  .timeline-dot {
+    width: 48px; height: 48px; min-width: 48px;
+    background: var(--teal); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 800; font-size: 16px;
+    position: relative; z-index: 1;
+    box-shadow: 0 2px 8px rgba(91,143,168,0.3);
+  }
+  .timeline-dot.amber { background: #D97706; box-shadow: 0 2px 8px rgba(217,119,6,0.3); }
+  .timeline-dot.green { background: var(--green); box-shadow: 0 2px 8px rgba(22,163,74,0.3); }
+  .timeline-content h3 { font-size: 17px; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+  .timeline-content p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+  .timeline-date {
+    font-size: 12px; font-weight: 700; color: var(--teal);
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;
+  }
+  .timeline-date.amber { color: #D97706; }
+  .timeline-date.green { color: var(--green); }
+
+  /* ===== FAQ ===== */
+  .faq-section { padding: 48px 20px; max-width: 760px; margin: 0 auto; }
+  .faq-section h2 { font-size: clamp(20px, 4vw, 26px); font-weight: 800; text-align: center; color: var(--dark); margin-bottom: 28px; }
+  .faq-item { border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+  .faq-item:hover { border-color: var(--teal); }
+  .faq-q {
+    padding: 18px 20px; font-size: 15px; font-weight: 700; color: var(--dark);
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    background: var(--white); border: none; width: 100%; text-align: left; min-height: 44px;
+  }
+  .faq-q:hover { background: var(--light); }
+  .faq-arrow { font-size: 18px; color: var(--teal); transition: transform 0.2s; min-width: 24px; text-align: center; }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+  .faq-item.open .faq-a { padding: 0 20px 18px; max-height: 300px; }
+  .faq-a p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+  /* ===== CONTACT BANNER ===== */
+  .contact-banner { background: var(--teal); color: #fff; padding: 40px 20px; text-align: center; }
+  .contact-banner h2 { font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+  .contact-banner p { font-size: 15px; opacity: 0.9; margin-bottom: 20px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-btn {
+    display: inline-block; background: #fff;
+    padding: 14px 36px; border-radius: 24px;
+    font-size: 19px; font-weight: 800;
+    text-decoration: none; transition: transform 0.2s;
+    color: var(--teal-dark);
+  }
+  .cta-btn:hover { transform: translateY(-2px); }
+  .call-link { display: block; margin-top: 12px; font-size: 14px; opacity: 0.85; }
+  .call-link a { color: #fff; text-decoration: underline; }
+
+  /* ===== STICKY CTA ===== */
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    z-index: 999;
+    background: linear-gradient(transparent, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.98));
+    padding: 16px 20px 14px; text-align: center;
+    transform: translateY(100%); transition: transform 0.4s ease;
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta a {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--teal); color: #fff;
+    text-decoration: none; font-weight: 800; font-size: 16px;
+    padding: 14px 32px; border-radius: 28px;
+    box-shadow: 0 4px 20px rgba(91,143,168,0.4);
+    transition: background 0.2s, transform 0.2s; min-height: 48px;
+  }
+  .sticky-cta a:hover { filter: brightness(0.92); transform: translateY(-1px); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--dark); color: #9CA3AF;
+    text-align: center; padding: 28px 20px 80px;
+    font-size: 13px; line-height: 1.8;
+  }
+  footer a { color: var(--teal); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ===== TOAST ===== */
+  .toast-notification {
+    position: fixed; bottom: -80px; left: 50%; transform: translateX(-50%);
+    background: #1a1a2e; color: #fff; padding: 16px 28px; border-radius: 12px;
+    font-size: 1rem; font-weight: 600; z-index: 100000;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    transition: bottom 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    text-align: center; max-width: 90vw; border: 2px solid var(--teal);
+  }
+  .toast-notification.show { bottom: 30px; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 22px; }
+    .info-section, .faq-section, .points-section { padding-left: 16px; padding-right: 16px; }
+    .expect-section { padding-left: 16px; padding-right: 16px; }
+    .sticky-cta a { width: 100%; justify-content: center; font-size: 15px; padding: 14px 20px; }
+    .timeline::before { left: 20px; }
+    .timeline-dot { width: 40px; height: 40px; min-width: 40px; font-size: 14px; }
+  }
+  @media (pointer: coarse) { .lang-btn, .faq-q, .cta-btn { min-height: 44px; } }
+ </style>
+ <script async src="https://plausible.io/js/pa-WhrBFEXMP6NUSZvRqGXVV.js"></script>
+ <script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+ </script>
+</head>
+<body>
+
+ <!-- LANGUAGE TOGGLE -->
+ <div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('en')" id="btn-en">English</button>
+  <button class="lang-btn" onclick="setLang('es')" id="btn-es">Español</button>
+ </div>
+
+ <!-- ===== HERO ===== -->
+ <section class="hero">
+  <div class="hero-badge">
+   <span class="dot"></span>
+   <span class="en">Update About Your Insurance</span>
+   <span class="es">Aviso Sobre Su Seguro</span>
+  </div>
+  <h1>
+   <span class="en">We're Still Here for You</span>
+   <span class="es">Seguimos Aquí Para Usted</span>
+  </h1>
+  <p class="hero-sub">
+   <span class="en">Your Healthfirst insurance is changing, but we are not going anywhere. This page tells you what you need to know.</span>
+   <span class="es">Su seguro Healthfirst está cambiando, pero nosotros no nos vamos. Esta página le dice lo que necesita saber.</span>
+  </p>
+ </section>
+
+ <!-- ===== INFO CARDS ===== -->
+ <section class="info-section">
+  <div class="info-card highlight">
+   <div class="info-card-icon">📋</div>
+   <h2>
+    <span class="en">What's Going On</span>
+    <span class="es">Qué Está Pasando</span>
+   </h2>
+   <p>
+    <span class="en">After <strong>May 15, 2026</strong>, Healthfirst and Belaray will not have a contract for a short time. We are working on a new one right now.</span>
+    <span class="es">Después del <strong>15 de mayo de 2026</strong>, Healthfirst y Belaray no tendrán contrato por un corto tiempo. Estamos trabajando en uno nuevo ahora mismo.</span>
+   </p>
+   <p>
+    <span class="en">If your visit is <strong>before May 15</strong>, nothing changes. You are covered.</span>
+    <span class="es">Si su cita es <strong>antes del 15 de mayo</strong>, nada cambia. Está cubierto.</span>
+   </p>
+  </div>
+  <div class="info-card good">
+   <div class="info-card-icon">✅</div>
+   <h2>
+    <span class="en">This Won't Last Long</span>
+    <span class="es">Esto No Va a Durar Mucho</span>
+   </h2>
+   <p>
+    <span class="en">We plan to be <strong>back with Healthfirst in about 4 months</strong>. We will update this page as soon as it's done.</span>
+    <span class="es">Planeamos estar <strong>de vuelta con Healthfirst en unos 4 meses</strong>. Vamos a actualizar esta página en cuanto esté listo.</span>
+   </p>
+   <p>
+    <span class="en"><strong>You do not need to change your plan.</strong> Just hang tight — we'll get through this together.</span>
+    <span class="es"><strong>No necesita cambiar su plan.</strong> Solo espere un poco — vamos a salir de esto juntos.</span>
+   </p>
+  </div>
+ </section>
+
+ <!-- ===== WHAT TO KNOW ===== -->
+ <section class="points-section">
+  <h2>
+   <span class="en">What You Should Know</span>
+   <span class="es">Lo Que Debe Saber</span>
+  </h2>
+
+  <div class="point-card">
+   <div class="point-icon">📅</div>
+   <div class="point-content">
+    <h3>
+     <span class="en">Already Our Patient?</span>
+     <span class="es">¿Ya Es Nuestro Paciente?</span>
+    </h3>
+    <p>
+     <span class="en">We want to keep seeing you. <strong>Text or call us</strong> and we will talk about how to take care of you during this short break.</span>
+     <span class="es">Queremos seguir viéndolo. <strong>Envíenos un texto o llámenos</strong> y hablaremos de cómo cuidarlo durante esta pausa corta.</span>
+    </p>
+   </div>
+  </div>
+
+  <div class="point-card">
+   <div class="point-icon">🆕</div>
+   <div class="point-content">
+    <h3>
+     <span class="en">New Patient?</span>
+     <span class="es">¿Paciente Nuevo?</span>
+    </h3>
+    <p>
+     <span class="en">We can still see you. During this time, new patients with Healthfirst would pay out of pocket. <strong>Text us</strong> and we can tell you more.</span>
+     <span class="es">Todavía podemos atenderlo. Durante este tiempo, pacientes nuevos con Healthfirst pagarían de su bolsillo. <strong>Escríbanos</strong> y le damos más detalles.</span>
+    </p>
+   </div>
+  </div>
+
+  <div class="point-card">
+   <div class="point-icon">💬</div>
+   <div class="point-content">
+    <h3>
+     <span class="en">Have Questions?</span>
+     <span class="es">¿Tiene Preguntas?</span>
+    </h3>
+    <p>
+     <span class="en">We are here for you. <strong>Text us at (516) 822-7546</strong> and we'll help.</span>
+     <span class="es">Estamos aquí para usted. <strong>Escríbanos al (516) 822-7546</strong> y le ayudamos.</span>
+    </p>
+   </div>
+  </div>
+ </section>
+
+ <!-- ===== TIMELINE ===== -->
+ <section class="expect-section">
+  <div class="expect-inner">
+   <h2>
+    <span class="en">Here's the Plan</span>
+    <span class="es">Este Es el Plan</span>
+   </h2>
+   <p class="expect-sub">
+    <span class="en">A quick look at what's coming.</span>
+    <span class="es">Un vistazo rápido de lo que viene.</span>
+   </p>
+   <div class="timeline">
+    <div class="timeline-item">
+     <div class="timeline-dot">✔</div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       <span class="en">Now — May 14, 2026</span>
+       <span class="es">Ahora — 14 de Mayo, 2026</span>
+      </div>
+      <h3>
+       <span class="en">You're All Set</span>
+       <span class="es">Todo Está Bien</span>
+      </h3>
+      <p>
+       <span class="en">Any visit before May 15 is covered. Nothing changes.</span>
+       <span class="es">Cualquier cita antes del 15 de mayo está cubierta. Nada cambia.</span>
+      </p>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot amber">⏳</div>
+     <div class="timeline-content">
+      <div class="timeline-date amber">
+       <span class="en">May 15 — About 4 Months</span>
+       <span class="es">15 de Mayo — Unos 4 Meses</span>
+      </div>
+      <h3>
+       <span class="en">Short Break</span>
+       <span class="es">Pausa Corta</span>
+      </h3>
+      <p>
+       <span class="en">We don't have a Healthfirst contract during this time, but we still want to see you. Text us and we'll figure it out together.</span>
+       <span class="es">No tenemos contrato con Healthfirst durante este tiempo, pero aún queremos verlo. Escríbanos y lo resolvemos juntos.</span>
+      </p>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot green">✔</div>
+     <div class="timeline-content">
+      <div class="timeline-date green">
+       <span class="en">Late Summer 2026</span>
+       <span class="es">Finales del Verano 2026</span>
+      </div>
+      <h3>
+       <span class="en">Back to Normal</span>
+       <span class="es">Todo Vuelve a la Normalidad</span>
+      </h3>
+      <p>
+       <span class="en">We expect to have a new contract with Healthfirst by then. Your insurance will work here like before. We'll update this page as soon as it's done.</span>
+       <span class="es">Esperamos tener un nuevo contrato con Healthfirst para entonces. Su seguro funcionará aquí como antes. Actualizaremos esta página en cuanto esté listo.</span>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- ===== FAQ ===== -->
+ <section class="faq-section">
+  <h2>
+   <span class="en">Common Questions</span>
+   <span class="es">Preguntas Frecuentes</span>
+  </h2>
+  <div class="faq-item">
+   <button class="faq-q" onclick="toggleFaq(this)">
+    <span><span class="en">Will Belaray take my Healthfirst again?</span><span class="es">¿Belaray va a aceptar mi Healthfirst otra vez?</span></span>
+    <span class="faq-arrow">▼</span>
+   </button>
+   <div class="faq-a"><p>
+    <span class="en"><strong>Yes.</strong> We are working on a new contract right now. We expect it to be done in about 4 months.</span>
+    <span class="es"><strong>Sí.</strong> Estamos trabajando en un nuevo contrato ahora mismo. Esperamos que esté listo en unos 4 meses.</span>
+   </p></div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-q" onclick="toggleFaq(this)">
+    <span><span class="en">Do I need to change my plan?</span><span class="es">¿Necesito cambiar mi plan?</span></span>
+    <span class="faq-arrow">▼</span>
+   </button>
+   <div class="faq-a"><p>
+    <span class="en"><strong>No.</strong> You do not need to change your plan. This break is short and we expect to be back with Healthfirst soon. If you're worried, text us and we'll talk.</span>
+    <span class="es"><strong>No.</strong> No necesita cambiar su plan. Esta pausa es corta y esperamos estar de vuelta con Healthfirst pronto. Si le preocupa, escríbanos y hablamos.</span>
+   </p></div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-q" onclick="toggleFaq(this)">
+    <span><span class="en">Should I cancel my appointment?</span><span class="es">¿Debo cancelar mi cita?</span></span>
+    <span class="faq-arrow">▼</span>
+   </button>
+   <div class="faq-a"><p>
+    <span class="en"><strong>No — please don't.</strong> If your visit is before May 15, you're covered. If it's after May 15, text us and we'll work it out. We don't want to lose you as a patient.</span>
+    <span class="es"><strong>No — por favor no la cancele.</strong> Si su cita es antes del 15 de mayo, está cubierto. Si es después del 15 de mayo, escríbanos y lo resolvemos. No queremos perderlo como paciente.</span>
+   </p></div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-q" onclick="toggleFaq(this)">
+    <span><span class="en">I'm new here — can I still come in?</span><span class="es">Soy nuevo aquí — ¿puedo venir?</span></span>
+    <span class="faq-arrow">▼</span>
+   </button>
+   <div class="faq-a"><p>
+    <span class="en">Yes! New patients with Healthfirst would pay out of pocket during this time. Text us and we'll tell you what to expect.</span>
+    <span class="es">¡Sí! Pacientes nuevos con Healthfirst pagarían de su bolsillo durante este tiempo. Escríbanos y le decimos qué esperar.</span>
+   </p></div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-q" onclick="toggleFaq(this)">
+    <span><span class="en">Why is this happening?</span><span class="es">¿Por qué está pasando esto?</span></span>
+    <span class="faq-arrow">▼</span>
+   </button>
+   <div class="faq-a"><p>
+    <span class="en">Insurance companies and doctors' offices sign contracts. Sometimes a contract ends before a new one is ready. That's what's happening here. We're fixing it as fast as we can.</span>
+    <span class="es">Las compañías de seguro y los consultorios firman contratos. A veces un contrato termina antes de que el nuevo esté listo. Eso es lo que está pasando. Lo estamos arreglando lo más rápido posible.</span>
+   </p></div>
+  </div>
+ </section>
+
+ <!-- ===== CONTACT BANNER ===== -->
+ <section class="contact-banner">
+  <h2>
+   <span class="en">Text Us — We'll Help</span>
+   <span class="es">Escríbanos — Le Ayudamos</span>
+  </h2>
+  <p>
+   <span class="en">Every patient is different. Text us and we'll talk about what works best for you.</span>
+   <span class="es">Cada paciente es diferente. Escríbanos y hablamos de qué funciona mejor para usted.</span>
+  </p>
+  <a href="sms:5168227546" class="cta-btn" onclick="trackContact('text')">💬 Text Us: (516) 822-7546</a>
+  <div class="call-link">
+   <span class="en">or <a href="tel:+15168227546" onclick="trackContact('call')">call (516) 822-7546</a></span>
+   <span class="es">o <a href="tel:+15168227546" onclick="trackContact('call')">llame al (516) 822-7546</a></span>
+  </div>
+ </section>
+
+ <!-- ===== STICKY CTA ===== -->
+ <div class="sticky-cta" id="sticky-cta">
+  <a href="sms:5168227546" onclick="trackContact('text-sticky')">
+   <span class="en">💬 Text Us — We'll Help</span>
+   <span class="es">💬 Escríbanos — Le Ayudamos</span>
+  </a>
+ </div>
+
+ <!-- ===== FOOTER ===== -->
+ <footer>
+  <p>
+   <span class="en">Belaray Dermatology · 358 S Oyster Bay Road, Hicksville, NY 11801 · <a href="tel:+15168227546">(516) 822-7546</a></span>
+   <span class="es">Belaray Dermatology · 358 S Oyster Bay Road, Hicksville, NY 11801 · <a href="tel:+15168227546">(516) 822-7546</a></span>
+  </p>
+ </footer>
+
+ <div class="toast-notification" id="toast-notification"></div>
+
+ <script>
+  // ===== LANGUAGE =====
+  function setLang(lang) {
+    document.body.classList.toggle('spanish', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang !== 'es');
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+  }
+  (function() {
+    if (new URLSearchParams(window.location.search).get('lang') === 'es') setLang('es');
+  })();
+
+  // ===== FAQ =====
+  function toggleFaq(btn) { btn.parentElement.classList.toggle('open'); }
+
+  // ===== TOAST =====
+  function showToast(msg) {
+    var t = document.getElementById('toast-notification');
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 3000);
+  }
+
+  function trackContact(type) {
+    if (typeof plausible !== 'undefined') plausible('contact', { props: { method: type } });
+    if (type === 'call' || type.includes('call')) showToast('Calling Belaray…');
+    else showToast('Opening text message…');
+    return true;
+  }
+
+  // ===== STICKY CTA =====
+  window.addEventListener('scroll', function() {
+    var el = document.getElementById('sticky-cta');
+    if (el) el.classList.toggle('visible', window.scrollY > 400);
+  });
+ </script>
+
+</body>
+</html>
